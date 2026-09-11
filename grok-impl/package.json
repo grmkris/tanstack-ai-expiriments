@@ -1,0 +1,56 @@
+{
+  "name": "template",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "dotenv": "^17.4.2",
+      "zod": "^4.4.3",
+      "typescript": "^6.0.3",
+      "@types/bun": "^1.4.0",
+      "libsql": "0.5.29",
+      "better-auth": "1.7.1",
+      "lucide-react": "^1.27.0",
+      "next-themes": "^0.4.6",
+      "react": "^19.2.8",
+      "react-dom": "^19.2.8",
+      "sonner": "^2.0.7",
+      "@types/react": "^19.2.17",
+      "@types/react-dom": "^19.2.3",
+      "tailwindcss": "^4.3.3"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "dev:web": "turbo run dev -F web --",
+    "dev:server": "turbo run dev -F server --",
+    "db:push": "turbo run db:push -F @template/db --",
+    "db:studio": "turbo run db:studio -F @template/db --",
+    "db:generate": "turbo run db:generate -F @template/db --",
+    "db:migrate": "turbo run db:migrate -F @template/db --",
+    "db:local": "turbo run db:local -F @template/db --",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "dependencies": {
+    "@template/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@template/config": "workspace:*",
+    "@types/bun": "catalog:",
+    "oxfmt": "latest",
+    "oxlint": "latest",
+    "turbo": "^2.10.12",
+    "typescript": "catalog:",
+    "ultracite": "7.10.7"
+  },
+  "packageManager": "bun@1.4.2"
+}
