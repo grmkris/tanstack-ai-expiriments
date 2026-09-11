@@ -1,0 +1,9 @@
+[submodule "grok-impl"]
+	path = grok-impl
+	url = https://github.com/grmkris/tanstack-ai-expiriments-grok-impl.git
+[submodule "tempalte"]
+	path = tempalte
+	url = https://github.com/grmkris/tanstack-ai-expiriments-tempalte.git
+[submodule "fable-impl"]
+	path = fable-impl
+	url = https://github.com/grmkris/tanstack-ai-expiriments-fable-impl.git
